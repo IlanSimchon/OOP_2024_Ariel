@@ -277,7 +277,7 @@ def demonstrate_image_blurring(image_path, kernel_size=(5, 5)):
                 for j in range(image.shape[1]):
                     # Extract the region to apply the kernel
                     region = padded[i:i + kernel_size[0], j:j + kernel_size[1]]
-                    blurred[i, j, channel] = np.max(region * kernel)
+                    blurred[i, j, channel] = np.mean(region * kernel)
 
         # Display results
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
@@ -508,22 +508,22 @@ def main():
     print("Advanced NumPy Tutorial Demonstrations\n" + "=" * 40)
 
     # Original demonstrations
-    demonstrate_array_creation()
-    demonstrate_broadcasting()
-    demonstrate_advanced_indexing()
-    demonstrate_statistics()
-    demonstrate_linear_algebra()
-    demonstrate_array_manipulation()
-    demonstrate_advanced_functions()
-    demonstrate_structured_arrays()
-    demonstrate_memory_management()
-    demonstrate_performance()
-    demonstrate_fft()
-    demonstrate_random()
+    # demonstrate_array_creation()
+    # demonstrate_broadcasting()
+    # demonstrate_advanced_indexing()
+    # demonstrate_statistics()
+    # demonstrate_linear_algebra()
+    # demonstrate_array_manipulation()
+    # demonstrate_advanced_functions()
+    # demonstrate_structured_arrays()
+    # demonstrate_memory_management()
+    # demonstrate_performance()
+    # demonstrate_fft()
+    # demonstrate_random()
 
     # Process image if available
     try:
-        process_image('friends.jpg')
+        # process_image('friends.jpg')
         # Add different kernel sizes for blurring
         demonstrate_image_blurring('friends.jpg', kernel_size=(3, 3))  # Small blur
         demonstrate_image_blurring('friends.jpg', kernel_size=(7, 7))  # Medium blur
